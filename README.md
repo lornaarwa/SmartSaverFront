@@ -83,6 +83,21 @@ Access the live app:
 https://<YourGitHubUsername>.github.io/<RepositoryName>/
 
 ## **File Structure**
+
+<pre>
+SmartSaverFront/
+├── wwwroot/
+│   ├── css/
+│   └── js/
+├── Pages/
+│   ├── Home.razor
+│   ├── Transactions.razor
+│   └── Goals.razor
+├── Shared/
+│   └── NavMenu.razor
+└── Program.cs
+</pre>
+
 SmartSaverFront/
 │
 ├─ Pages/
