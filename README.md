@@ -98,23 +98,6 @@ SmartSaverFront/
 └── Program.cs
 </pre>
 
-SmartSaverFront/
-│
-├─ Pages/
-│   ├─ Home.razor
-│   ├─ Transactions.razor
-│   └─ Goals.razor
-│
-├─ Shared/
-│   └─ NavMenu.razor
-│
-├─ wwwroot/
-│   └─ css/
-│       └─ site.css
-│
-├─ Program.cs
-└─ SmartSaverFront.csproj
-
 
 ## **Data Models**
 record Tx(DateTime Date, string Type, string Description, decimal Amount);
