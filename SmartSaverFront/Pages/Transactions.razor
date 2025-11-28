@@ -1,0 +1,113 @@
+﻿@page "/transactions"
+@using SmartSaverFront.Models
+
+<h1>Transactions</h1>
+
+<div class="card card-dark">
+    <h3>Add Transaction</h3>
+    <input placeholder="Description" @bind="txDesc" class="input-dark" />
+    <select @bind="txType" class="input-dark">
+        <option value="Expense">Expense</option>
+        <option value="Income">Income</option>
+    </select>
+    <input type="number" step="0.01" @bind="txAmount" placeholder="Amount" class="input-dark" />
+    <button class="btn-dark" @onclick="AddTx">Add</button>
+</div>
+
+<h3>Recent Transactions</h3>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var t in transactions)
+        {
+            <tr>
+                <td>@t.Date.ToString("yyyy-MM-dd")</td>
+                <td>@t.Type</td>
+                <td>@t.Description</td>
+                <td>@t.Amount.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    /* Card styling */
+    .card-dark {
+        background-color: #1a1a1a;
+        color: #00ff00;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px #00ff0033;
+    }
+
+    /* Inputs and select */
+    .input-dark {
+        background-color: #0e0e0e;
+        color: #00ff00;
+        border: 1px solid #00ff00;
+        padding: 0.3rem 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    /* Button styling */
+    .btn-dark {
+        background-color: #00ff00;
+        color: #0e0e0e;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+    }
+
+        .btn-dark:hover {
+            background-color: #00cc00;
+        }
+
+    /* Table styling */
+    table, th, td {
+        border: 1px solid #00ff00 !important;
+    }
+
+    .table-dark {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #0e0e0e !important;
+        color: #00ff00 !important;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        text-align: left;
+    }
+
+    tr:nth-child(even) {
+        background-color: #1a1a1a !important;
+    }
+
+    tr:hover {
+        background-color: #222 !important;
+    }
+</style>
+
+@code {
+    [CascadingParameter] public List<Tx> transactions { get; set; } = new();
+    private string txDesc = "";
+    private string txType = "Expense";
+    private decimal txAmount = 0;
+
+    void AddTx()
+    {
+        if (txAmount <= 0 || string.IsNullOrWhiteSpace(txDesc)) return;
+        transactions.Insert(0, new Tx(DateTime.Now, txType, txDesc, txAmount));
+        txDesc = ""; txAmount = 0;
+    }
+}

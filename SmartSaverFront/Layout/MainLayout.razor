@@ -1,0 +1,25 @@
+﻿@inherits LayoutComponentBase
+
+<div class="app-layout">
+    <NavMenu />
+    <div class="main-content">
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>
+
+<style>
+    .app-layout {
+        display: flex;
+        min-height: 100vh;
+        background-color: #0e0e0e;
+    }
+
+    .main-content {
+        flex: 1;
+        padding: 1rem;
+        background-color: #111;
+        color: #00ff00;
+    }
+</style>

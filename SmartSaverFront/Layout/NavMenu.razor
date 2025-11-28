@@ -1,0 +1,56 @@
+﻿<div class="sidebar">
+    <div class="sidebar-header">
+        <h2>SmartSaver</h2>
+    </div>
+    <nav class="nav-links">
+        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">🏠 Home</NavLink>
+        <NavLink class="nav-link" href="goals">🎯 Goals</NavLink>
+        <NavLink class="nav-link" href="transactions">💰 Transactions</NavLink>
+        <NavLink class="nav-link" href="summary">📊 Summary</NavLink>
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
+}
+
+<style>
+    .sidebar {
+        width: 220px;
+        background-color: #0e0e0e;
+        border-right: 1px solid #00ff00;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .sidebar-header h2 {
+        color: #00ff00;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        color: #00ff00;
+        font-weight: bold;
+        padding: 0.5rem 0.25rem;
+        margin-bottom: 0.25rem;
+        text-decoration: none;
+    }
+
+        .nav-link.active {
+            background-color: #00ff00;
+            color: #0e0e0e !important;
+            border-radius: 5px;
+            padding-left: 0.5rem;
+        }
+</style>
+
