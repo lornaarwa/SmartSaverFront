@@ -9,7 +9,7 @@
 ## **Live Demo**
 
 The app is hosted and can be accessed here:  
-[SmartSaver Front-End Live](https://<YourGitHubUsername>.github.io/SmartSaverFront/)
+[SmartSaver Front-End Live](https://<lornaarwa>.github.io/SmartSaverFront/)
 
 ---
 
