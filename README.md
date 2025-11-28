@@ -1,6 +1,5 @@
 # SmartSaver Front-End
 
-![SmartSaver Logo](https://via.placeholder.com/150x50.png?text=SmartSaver)
 
 **SmartSaver** is a lightweight financial tracker front-end built with **Blazor WebAssembly**. It allows users to track income, expenses, and financial goals using a sleek dark-themed UI with neon-green accents.
 
