@@ -4,6 +4,9 @@
 **SmartSaver** is a lightweight financial tracker front-end built with **Blazor WebAssembly**. It allows users to track income, expenses, and financial goals using a sleek dark-themed UI with neon-green accents.
 
 ---
+## Live Demo
+
+[![Live Site](https://img.shields.io/badge/Live-App-Netlify-brightgreen)](https://marvelous-choux-c1697b.netlify.app/)
 
 
 
