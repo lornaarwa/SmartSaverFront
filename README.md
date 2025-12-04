@@ -6,7 +6,7 @@
 ---
 ## Live Demo
 
-[![Live Site](https://img.shields.io/badge/Live-App-Netlify-brightgreen)](https://marvelous-choux-c1697b.netlify.app/)
+Live app URL: https://marvelous-choux-c1697b.netlify.app/
 
 
 
